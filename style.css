@@ -1,0 +1,481 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Full height of the viewport */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background: #e0e5ec; /* Background color */
+}
+
+.page {
+    position: relative; /* Set position to relative for the pseudo-element */
+    height: 96vh;
+    width: 112vh;
+    margin: 0; /* Remove default margin */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    outline: 7px white solid;
+    overflow: hidden; /* Hide overflow if necessary */
+    border-radius: 35px;
+}
+
+.page::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background: url('background.jpg') no-repeat center center/cover; /* Set the background image */
+    opacity: 0.7; /* Set the desired opacity */
+    z-index: -1; /* Send it behind the content */
+}
+
+.welcome {
+    text-align: center; /* Center text inside the welcome div */
+}
+
+.welcome a{
+    text-decoration: none;
+}
+
+h1, h3 {
+    color: #353535;
+    font-family: "Cormorant Garamond", serif;
+    margin: 0;
+      text-shadow: 4px 3px 4px white;
+}
+
+h1{
+	font-size: 70px;
+	margin-bottom: -5px;
+font-family: "Sour Gummy", sans-serif;
+}
+
+h3{
+	font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: rgb(0, 172, 238); /* Example button background color */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.btn-7 {
+    background: linear-gradient(0deg, rgb(255, 230, 247) 0%, rgb(255, 102, 204) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+.btn-7 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-7:before,
+.btn-7:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: rgb(255, 102, 204);
+    box-shadow:
+        -7px -7px 20px 0px rgba(255, 255, 255, .9),
+        -4px -4px 5px 0px rgba(255, 255, 255, .9),
+        7px 7px 20px 0px rgba(0, 0, 0, .2),
+        4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.btn-7:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn-7:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-7:hover {
+    color: rgb(255, 102, 204); /* Change text color on hover */
+    background: white; /* Change background to white on hover */
+}
+
+.btn-7:hover:before {
+    height: 100%;
+}
+
+.btn-7:hover:after {
+    width: 100%;
+}
+
+.btn-7 span:before,
+.btn-7 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgb(255, 102, 204);
+    box-shadow:
+        -7px -7px 20px 0px rgba(255, 255, 255, .9),
+        -4px -4px 5px 0px rgba(255, 255, 255, .9),
+        7px 7px 20px 0px rgba(0, 0, 0, .2),
+        4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.btn-7 span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.btn-7 span:after {
+    height: 2px;
+    width: 0%;
+}
+
+.btn-7 span:hover:before {
+    height: 100%;
+}
+
+.btn-7 span:hover:after {
+    width: 100%;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    right: 0; /* Align it to the right */
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: pink;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between the links */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: rgb(255, 102, 204);
+}
+.navbar:hover .btn-7{
+    outline: 2px white solid;
+}
+
+.nav-links li:hover {
+    color: white;
+}
+.logo-image{
+    display: block;
+    width: 111px;
+    margin: none;
+}
+.hover-logo{
+    display: none;
+}
+.navbar:hover .logo-image{
+    display: none;
+}
+.navbar:hover .hover-logo{
+    display: block;
+}
+
+.btn-7 {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: linear-gradient(0deg, rgb(255, 230, 247) 0%);
+    color: #fff;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-7 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-7:before,
+.btn-7:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: rgb(255, 102, 204);
+    box-shadow:
+        -7px -7px 20px 0px rgba(255, 255, 255, .9),
+        -4px -4px 5px 0px rgba(255, 255, 255, .9),
+        7px 7px 20px 0px rgba(0, 0, 0, .2),
+        4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.btn-7:before {
+    height: 0%;
+    width: 2px;
+}
+
+
+.btn-7:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-7:hover {
+    color: rgb(255, 102, 204); /* Change text color on hover */
+    background: white; /* Change background to white on hover */
+}
+
+.btn-7:hover:before {
+    height: 100%;
+}
+
+.btn-7:hover:after {
+    width: 100%;
+}
+
+.btn-7 span:before,
+.btn-7 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgb(255, 102, 204);
+    box-shadow:
+        -7px -7px 20px 0px rgba(255, 255, 255, .9),
+        -4px -4px 5px 0px rgba(255, 255, 255, .9),
+        7px 7px 20px 0px rgba(0, 0, 0, .2),
+        4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.btn-7 span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.btn-7 span:after {
+    height: 2px;
+    width: 0%;
+}
+body a{
+    text-decoration: none;
+}
+
+.btn-7 span:hover:before {
+    height: 100%;
+}
+
+.btn-7 span:hover:after {
+    width: 100%;
+}
+
+/* Add some padding to the top of the body to prevent content from being ⬤*/
+
+.image-container {
+    margin-top: 60px; /* Space below the navbar */
+    position: relative; /* Position relative for absolute positioning of child elements */
+    overflow: hidden; /* Hide overflow if needed */
+}
+
+.welcome {
+    position: relative; /* Position relative for the image and text */
+    text-align: center; /* Center the text */
+}
+
+.welcome img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    opacity: 0.3; /* Set image transparency */
+}
+
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white; /* Text color */
+    text-align: center;
+    z-index: 2; /* Ensure it is above the image */
+}
+
+.welcome-message h1 {
+    color: white;
+    font-size: 6vw; /* Responsive font size based on viewport width */
+    text-shadow: 4px -2px 40px rgba(0, 0, 0, 0.7); /* Shadow for better visibility */
+}
+
+.welcome-message h3 {
+    margin: 0;
+    font-size: 3vw; /* Responsive font size based on viewport width */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.introduction {
+    padding: 40px; /* Add padding for spacing */
+    background-color: #f4f4f4; /* Light background color for contrast */
+    min-height: 100vh; /* Ensure the section takes full height */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text */
+    color: #353535; /* Text color */
+}
+
+.introduction h1 {
+    font-size: 2.5rem; /* Font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.introduction p {
+    font-size: 1.2rem; /* Font size for the paragraph */
+    max-width: 800px; /* Limit the width of the paragraph */
+    line-height: 1.6; /* Improve readability */
+}
+
+.footer {
+    background-color: white; /* Background color */
+    color: rgb(255, 102, 204); /* Text color */
+    font-size: 16px;
+    padding: 20px 0; /* Padding for top and bottom */
+    position: relative; /* Position relative for layout */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between left and right */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width for the footer */
+    margin: 0 auto; /* Center the footer */
+    padding: 0 20px; /* Padding for left and right */
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1; /* Allow equal space for each section */
+    text-align: center; /* Center text */
+}
+
+.footer-center {
+    text-align: center; /* Center text in the middle */
+}
+
+.footer a {
+    color: rgb(255, 102, 204); /* Link color */
+    text-decoration: none; /* Underline links */
+}
+
+.footer:hover a{
+    color: white;
+}
+.footer a:hover{
+text-decoration: underline;
+}
+
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+}
+
+.image-container {
+    flex: 1; /* Allow the image container to grow and take available space */
+}
+
+.footer:hover {
+    background-color: rgb(255, 102, 204); /* Background color */
+    color: white; /* Text color */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Center text */
+}
+
+.project p{
+    font-size: 20px;
+}
+.project div{
+    height: 1735px;
+    width: 0px;
+}
+.project ol{
+    font-size: 20px;
+}
+
+.paras{
+
+    background-color: rgba(255, 102, 204, 0.6);
+    color: black;
+    outline: 4px white solid;
+    padding: 20px 20px;
+    border-radius: 20px;
+    margin: 10px 40px 100px 40px;
+    display: block;
+}
+.paras:hover{
+        color: white;
+    text-shadow: 7px 10px 20px #888888;
+    box-shadow: 5px 10px 15px #888888;
+}

@@ -1,0 +1,19 @@
+body, html {
+    margin: 0; /* Remove default margin */
+    height: 100%; /* Full height for body */
+}
+
+.iframe-container {
+    position: relative; /* Allows absolute positioning of the iframe */
+    width: 100%; /* Full width of the container */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+iframe {
+    width: 70%; /* Set the width of the iframe */
+    height: 70%; /* Set the height of the iframe */
+    border: none; /* Remove border */
+}
